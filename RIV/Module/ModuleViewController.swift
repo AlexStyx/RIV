@@ -30,7 +30,18 @@ class ModuleViewController: UIViewController {
         // Do any additional setup after loading the view.
         interactor.handle(event: .viewDidAppear)
     }
+}
 
+extension ModuleViewController: ViewDescription {
+    func update(event: ModuleName.DataEvent) {
+        switch event {
+        case .dataLoaded:
+            obtainDataLoaded()
+        }
+    }
+}
 
+private extension ModuleViewController {
+    func obtainDataLoaded() {}
 }
 

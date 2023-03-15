@@ -19,6 +19,7 @@ final class ModuleBuilder {
         view.onViewReady = {
             onViewReady(interactor)
         }
+        interactor.view = view
         router.view = view
         return router
     }
