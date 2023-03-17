@@ -7,18 +7,15 @@
 
 import Foundation
 
-protocol ViewDescription: AnyObject {
-    func update(event: ModuleName.DataEvent)
+protocol InteractorDescription {
+    func handle(event: ModuleName.ViewEvent)
 }
+
 
 final class ModuleInteractor {
     
     weak var view: ViewDescription!
-    var router: ModuleRouter
-    
-    init(router: ModuleRouter) {
-        self.router = router
-    }
+    var router: ModuleRouter?
 }
 
 
@@ -41,7 +38,7 @@ extension ModuleInteractor: ModuleInput {
 // MARK: - ObtainEvenets
 private extension ModuleInteractor {
     private func obtainViewDidLoad() {
-        view.update(event: .dataLoaded)
+        view.update(with: .dataLoaded)
     }
 }
 

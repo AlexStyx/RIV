@@ -7,34 +7,25 @@
 
 import UIKit
 
-protocol InteractorDescription {
-    func handle(event: ModuleName.ViewEvent)
+protocol ViewDescription: AnyObject {
+    func update(with action: ModuleName.DataAction)
 }
 
 class ModuleViewController: UIViewController {
     
-    var interactor: InteractorDescription
+    var interactor: InteractorDescription?
     var onViewReady: (() -> Void)?
-    
-    init(interactor: InteractorDescription) {
-        self.interactor = interactor
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        interactor.handle(event: .viewDidAppear)
+        interactor?.handle(event: .viewDidAppear)
     }
+    
 }
 
 extension ModuleViewController: ViewDescription {
-    func update(event: ModuleName.DataEvent) {
-        switch event {
+    func update(with action: ModuleName.DataAction) {
+        switch action {
         case .dataLoaded:
             obtainDataLoaded()
         }

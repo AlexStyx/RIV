@@ -14,7 +14,7 @@ enum ModuleName {
         case viewDidAppear
     }
     
-    enum DataEvent {
+    enum DataAction {
         case dataLoaded
     }
 }
