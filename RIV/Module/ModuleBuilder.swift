@@ -7,11 +7,13 @@
 
 import Foundation
 
+@objc
 protocol ModuleInput {
     
 }
 
-final class ModuleBuilder {
+final class ModuleBuilder: NSObject {
+    @objc
     class func build(onViewReady: @escaping (ModuleInput) -> Void) -> ModuleRouter {
         let router = ModuleRouter()
         let interactor = ModuleInteractor()

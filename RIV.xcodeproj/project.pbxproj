@@ -15,6 +15,7 @@
 		5F11D04E299F74FD006AF4D3 /* ModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F11D04D299F74FD006AF4D3 /* ModuleRouter.swift */; };
 		5F11D052299F7517006AF4D3 /* ModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F11D051299F7517006AF4D3 /* ModuleInteractor.swift */; };
 		5F11D054299F7545006AF4D3 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F11D053299F7545006AF4D3 /* Events.swift */; };
+		5F28C8DA29C4A49900271CF9 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F28C8D929C4A49900271CF9 /* TestViewController.m */; };
 		5F42FE8029A3AF8F00BD9805 /* BaseSwiftRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F42FE7F29A3AF8F00BD9805 /* BaseSwiftRouter.swift */; };
 		5F42FE9D29A766C200BD9805 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F42FE9C29A766C200BD9805 /* ModuleBuilder.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,9 @@
 		5F11D04D299F74FD006AF4D3 /* ModuleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleRouter.swift; sourceTree = "<group>"; };
 		5F11D051299F7517006AF4D3 /* ModuleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleInteractor.swift; sourceTree = "<group>"; };
 		5F11D053299F7545006AF4D3 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		5F28C8D729C4A49800271CF9 /* RIV-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RIV-Bridging-Header.h"; sourceTree = "<group>"; };
+		5F28C8D829C4A49900271CF9 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		5F28C8D929C4A49900271CF9 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		5F42FE7F29A3AF8F00BD9805 /* BaseSwiftRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSwiftRouter.swift; sourceTree = "<group>"; };
 		5F42FE9629A7656E00BD9805 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5F42FE9C29A766C200BD9805 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
@@ -93,6 +97,9 @@
 		5F5C8B8929C1C62E00FDF190 /* NextModule */ = {
 			isa = PBXGroup;
 			children = (
+				5F28C8D829C4A49900271CF9 /* TestViewController.h */,
+				5F28C8D929C4A49900271CF9 /* TestViewController.m */,
+				5F28C8D729C4A49800271CF9 /* RIV-Bridging-Header.h */,
 			);
 			path = NextModule;
 			sourceTree = "<group>";
@@ -129,6 +136,7 @@
 				TargetAttributes = {
 					5F11D034299F73A4006AF4D3 = {
 						CreatedOnToolsVersion = 14.0.1;
+						LastSwiftMigration = 1400;
 					};
 				};
 			};
@@ -173,6 +181,7 @@
 				5F42FE9D29A766C200BD9805 /* ModuleBuilder.swift in Sources */,
 				5F11D03D299F73A4006AF4D3 /* ModuleViewController.swift in Sources */,
 				5F11D039299F73A4006AF4D3 /* AppDelegate.swift in Sources */,
+				5F28C8DA29C4A49900271CF9 /* TestViewController.m in Sources */,
 				5F11D03B299F73A4006AF4D3 /* SceneDelegate.swift in Sources */,
 				5F11D054299F7545006AF4D3 /* Events.swift in Sources */,
 			);
@@ -311,6 +320,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8WDL89Q895;
@@ -328,6 +338,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = test.RIV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RIV/NextModule/RIV-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -338,6 +350,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8WDL89Q895;
@@ -355,6 +368,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = test.RIV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RIV/NextModule/RIV-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -18,7 +18,7 @@ class ModuleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        interactor?.handle(event: .viewDidAppear)
+        interactor?.handle(event: .viewDidload)
     }
     
 }
